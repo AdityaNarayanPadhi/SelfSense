@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: shelfsense-api
+    env: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: SERPAPI_API_KEY
+        sync: false
+      - key: TABPFN_API_KEY
+        sync: false
+      - key: ELEVENLABS_API_KEY
+        sync: false
+      - key: ELEVENLABS_VOICE_ID
+        value: 21m00Tcm4TlvDq8ikWAM
+      - key: GEMMA_API_BASE
+        value: http://localhost:11434
+      - key: GEMMA_MODEL_NAME
+        value: gemma2
+      - key: ALLOWED_ORIGINS
+        value: "*"
