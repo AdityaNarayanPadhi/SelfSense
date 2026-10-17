@@ -280,27 +280,28 @@ services:
 
 ---
 
-## 🌐 Next.js / Vercel Frontend Integration
+## 🎨 Warm Industrial Gray Frontend (`frontend/`)
 
-In your Next.js application, invoke the ShelfSense backend:
+The repository includes a production-grade **Next.js (App Router)** frontend designed under a **Warm Industrial Gray** brutalist aesthetic inspired by Superdesign editorial standards:
 
-```typescript
-const formData = new FormData();
-formData.append("product_query", "Sony WH-1000XM5 Wireless Headphones");
-formData.append("csv_file", selectedFile);
+- **12-Column Structural Grid**: Full-viewport 12-column architectural grid overlay.
+- **Tactile Grain**: Global SVG fractal noise overlay at `0.035` opacity.
+- **Stroke & Outline Typography**: Fluid display headers alternating between filled charcoal and outline stroke text.
+- **Four Integrated Intelligence Modules**:
+  1. `StockoutTelemetry`: TabPFN-3.5 depletion countdown, burn velocity, and risk badges.
+  2. `CompetitorRadar`: SerpApi Google Shopping tabular matrix with live price spreads and out-of-stock vacuum detection.
+  3. `PlaybookTerminal`: Gemma dynamic pricing surge calculator, 30-char ad copy generator with 1-click clipboard copy, and tactical directives.
+  4. `AudioBriefModule`: ElevenLabs spoken briefing player with interactive audio frequency visualizer and collapsible spoken script.
 
-const response = await fetch("https://shelfsense-api.onrender.com/api/analyze", {
-  method: "POST",
-  body: formData,
-});
+### Running the Frontend Locally:
 
-const data = await response.json();
-console.log("Arbitrage Playbook:", data.strategy);
-
-// Play the ElevenLabs morning brief:
-const audio = new Audio(`https://shelfsense-api.onrender.com${data.audio_url}`);
-audio.play();
+```bash
+cd frontend
+npm install
+npm run dev
 ```
+
+Visit `http://localhost:3000` in your browser.
 
 ---
 
