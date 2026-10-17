@@ -93,7 +93,7 @@ export const MassiveFooter: React.FC = () => {
                 </li>
                 <li>
                   <a
-                    href="https://shelfsense-api.onrender.com/docs"
+                    href="https://selfsense.onrender.com/docs"
                     target="_blank"
                     rel="noreferrer"
                     className="text-zinc-400 hover:text-[#0066FF] transition-colors flex items-center gap-1.5"

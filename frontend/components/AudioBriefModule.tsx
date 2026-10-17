@@ -21,7 +21,7 @@ export const AudioBriefModule: React.FC<AudioBriefModuleProps> = ({
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // Compute full audio source URL
-  const backendBase = process.env.NEXT_PUBLIC_API_URL || "https://shelfsense-api.onrender.com";
+  const backendBase = process.env.NEXT_PUBLIC_API_URL || "https://selfsense.onrender.com";
   const fullAudioSrc = audioUrl.startsWith("http")
     ? audioUrl
     : `${backendBase}${audioUrl.startsWith("/") ? "" : "/"}${audioUrl}`;

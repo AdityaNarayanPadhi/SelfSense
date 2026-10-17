@@ -58,7 +58,7 @@ export default function Home() {
         formData.append("csv_file", blob, "inventory_history.csv");
       }
 
-      const backendUrl = process.env.NEXT_PUBLIC_API_URL || "https://shelfsense-api.onrender.com";
+      const backendUrl = process.env.NEXT_PUBLIC_API_URL || "https://selfsense.onrender.com";
       const endpoint = `${backendUrl.replace(/\/$/, "")}/api/analyze`;
 
       console.log(`[ShelfSense] Dispatching scan payload to ${endpoint}...`);
